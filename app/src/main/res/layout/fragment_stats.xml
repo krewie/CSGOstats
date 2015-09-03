@@ -1,0 +1,245 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.kollateral.kristian.csgostats.StatsActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Username"
+                android:id="@+id/profile_username" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/linearLayout">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/profile_av"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/steam_av"
+                android:nestedScrollingEnabled="false"
+                android:minHeight="12dp"
+                android:minWidth="45dp"
+                android:maxHeight="12dp"
+                android:maxWidth="12dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="1.37"
+                    android:id="@+id/total_kd"
+                    android:layout_gravity="center"
+                    android:textSize="30dp"
+                    android:layout_marginBottom="3dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/kd_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:background="@android:color/transparent"
+                    android:layout_alignTop="@+id/profile_av"
+                    android:layout_alignBottom="@+id/profile_av"
+                    android:layout_toEndOf="@+id/profile_av">
+
+                </com.github.mikephil.charting.charts.PieChart>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Kills"
+                android:id="@+id/textView3"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_kills"
+                android:layout_below="@+id/textView3"
+                android:layout_alignStart="@+id/textView3" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/total_deaths" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Total deaths"
+                android:id="@+id/textView99"
+                android:layout_above="@+id/total_deaths"
+                android:layout_toEndOf="@+id/imageView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_deaths"
+                android:layout_alignTop="@+id/total_kills"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:src="@mipmap/ic_launcher"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_time_played"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_toEndOf="@+id/imageView3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Time played"
+                android:id="@+id/textview"
+                android:layout_above="@+id/total_time_played"
+                android:layout_alignStart="@+id/total_time_played" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignTop="@+id/textView9"
+                android:layout_alignStart="@+id/imageView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_wins"
+                android:layout_below="@+id/textview"
+                android:layout_alignStart="@+id/total_deaths" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Total wins"
+                android:id="@+id/textView9"
+                android:layout_alignTop="@+id/textview"
+                android:layout_alignStart="@+id/total_wins" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/imageView4"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_mvp"
+                android:layout_alignBottom="@+id/imageView5"
+                android:layout_alignStart="@+id/total_time_played" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="MVP"
+                android:id="@+id/textView11"
+                android:layout_above="@+id/total_mvp"
+                android:layout_toEndOf="@+id/imageView5" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView6"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignTop="@+id/textView11"
+                android:layout_alignStart="@+id/imageView4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/total_rescued_hostages"
+                android:layout_alignBottom="@+id/imageView6"
+                android:layout_toEndOf="@+id/imageView6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hostages"
+                android:id="@+id/textView13"
+                android:layout_above="@+id/total_rescued_hostages"
+                android:layout_alignStart="@+id/total_rescued_hostages" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
